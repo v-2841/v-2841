@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Vitaliy</h1>
 <h3 align="center">A backend developer</h3>
 
-- 🔭 I’m currently working on **my pet project called laboratory that has partial LIMS functionality**
+- 🔭 I’m currently working on **project called laboratory that has partial LIMS functionality** and **online liquor store**
 
-- 🌱 I’m currently learning **python, django, DRF, some frontend things (html, css)**
+- 🌱 I’m currently learning **python, django, DRF, some frontend things (html, css), C**
 
 - 📫 How to reach me **rosselsprung2841@gmail.com**
 

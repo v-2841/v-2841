@@ -2,7 +2,7 @@
 
 I build the whole path a request takes: the **Django / FastAPI** service that answers it, the **Next.js** app in front, the **BigQuery** pipelines behind, and the **Terraform, Caddy, CDN and WAF** that keep it standing. Currently doing that full-time in **iGaming**, on a product with landing pages in several languages and a data platform underneath.
 
-Off the clock the scale drops and the standard doesn't: firmware that has to stay alive in 38 KB of heap, a C parser for a lab chromatograph, an Armbian board port, an Android app that watches my servers.
+Off the clock the scale drops and the standard doesn't: firmware that has to stay alive in 38 KB of heap, a C parser for a lab chromatograph, an Android app that watches my servers.
 
 [**Telegram**](https://t.me/vita2841) · [**rosselsprung2841@gmail.com**](mailto:rosselsprung2841@gmail.com)
 
@@ -31,8 +31,11 @@ Backup orchestrator for my servers. Pulls files, live SQLite databases and Postg
 **[ratio_checker](https://github.com/v-2841/ratio_checker)** — C · WinAPI · MinGW
 Windows desktop tool that parses gas chromatograph exports, extracts fatty-acid peak areas and checks five ratios against GOST 32261 — the test that reveals vegetable fat hiding in butter.
 
-**[armbian_build](https://github.com/v-2841/armbian_build)** — Bash · U-Boot · Linux DTS
-Armbian port for the RK3328 control board inside a 3D printer — U-Boot, device tree, kernel config.
+**[Vita](https://github.com/v-2841/Vita)** — Kotlin · Jetpack Compose · AndroidKeyStore
+Android app that watches my VPS and the VPN panel on it: CPU, RAM, disk and traffic, plus every client with its transfer, current speed and last time seen online. Credentials never leave the device unencrypted — they are sealed with AES-GCM in the Android KeyStore.
+
+**[daystat](https://github.com/v-2841/daystat)** — Django · Tailwind 4 · Chart.js · Docker
+Personal tracker for weight, calories and spending: a hand-written server-side calendar with forecasts, smoothed charts and weekly summaries. Tailwind builds without Node, fonts are self-hosted, and the whole thing scores 96+ on Lighthouse.
 
 **[laboratory](https://github.com/v-2841/laboratory)** — Django · DRF · PostgreSQL · openpyxl
 Internal service for the chemical lab I worked in: reagent stock and expiry tracking, test requests, standards and regulatory documents, role-based access, and xlsx exports onto the lab's own templates. Web app, REST API, Telegram bot and an Android client.
@@ -42,8 +45,6 @@ Telegram remote for a 3D printer over Moonraker: live print state, temperatures,
 
 **[samsung-health-export](https://github.com/v-2841/samsung-health-export)** — Python (stdlib)
 Turns a Samsung Health export into one self-describing JSON file a doctor can actually read — units legend, coverage manifest, clinical grouping.
-
-Upstream: two pull requests merged into [**3x-ui**](https://github.com/MHSanaei/3x-ui), fixing RPM installers that pulled in a full system upgrade.
 
 ### Stack
 
@@ -110,10 +111,6 @@ last public push  1m ago
 
 - **[shells](https://github.com/v-2841/shells)** — Fedora tooling: an installer for the fish shell, plus an interactive TUI that builds Caddy with the plugins I need.
 - **[qr_stand](https://github.com/v-2841/qr_stand)** — generates a 3D-printable stand with your Wi-Fi QR code baked into the geometry, straight to STL.
-- **[Vita](https://github.com/v-2841/Vita)** — Android app that watches my VPS and its VPN panel: CPU, RAM, disk, traffic per client. Credentials are sealed with AES-GCM in the Android KeyStore.
-- **[daystat](https://github.com/v-2841/daystat)** — personal Django tracker for weight, calories and spending, with a hand-built server-side calendar, self-hosted fonts and a Tailwind build that needs no Node.
-- **[zv-uplink](https://github.com/v-2841/zv-uplink)** — a 1×1 Android widget that answers one question: is the internet actually up?
-- **[telegram-openvpn-bot](https://github.com/v-2841/telegram-openvpn-bot)** — one tap, one day-long OpenVPN key, delivered as a file.
 - **[tapo_socket_charging](https://github.com/v-2841/tapo_socket_charging)** — keeps a laptop battery in the 40-60% band by switching the smart socket its charger sits in.
 
 </details>

@@ -87,17 +87,17 @@ last public push  1h ago
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/github_dark/0-profile-details.svg">
-  <img alt="Profile details" src="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/default/0-profile-details.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg">
+  <img alt="Profile details" src="./profile-summary-card-output/default/0-profile-details.svg" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/github_dark/3-stats.svg">
-  <img alt="Stats" src="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/default/3-stats.svg" width="49%">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/3-stats.svg">
+  <img alt="Stats" src="./profile-summary-card-output/default/3-stats.svg" width="49%">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/github_dark/4-productive-time.svg">
-  <img alt="Productive time" src="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/default/4-productive-time.svg" width="49%">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/4-productive-time.svg">
+  <img alt="Productive time" src="./profile-summary-card-output/default/4-productive-time.svg" width="49%">
 </picture>
 
 <img alt="Contribution calendar in 3d" src="./profile-3d-contrib/profile-night-view.svg" width="100%">

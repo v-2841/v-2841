@@ -11,8 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: activity
-  cancel-in-progress: true
+  group: main-writer
 
 jobs:
   update:
@@ -34,5 +33,7 @@ jobs:
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
-          git diff --staged --quiet || git commit -m 'chore: refresh profile activity'
+          git diff --staged --quiet && exit 0
+          git commit -m 'chore: refresh profile activity'
+          git pull --rebase origin main
           git push

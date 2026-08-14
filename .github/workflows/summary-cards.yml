@@ -8,6 +8,11 @@ on:
 permissions:
   contents: write
 
+# Every workflow here that commits to main shares one queue: the action below
+# pushes the checked-out branch itself, so parallel runs reject each other.
+concurrency:
+  group: main-writer
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,7 +25,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
-          BRANCH_NAME: profile-summary-card-output
+          # The action pushes whatever branch is checked out; this input only
+          # rewrites the links in its own preview file.
+          BRANCH_NAME: main
           UTC_OFFSET: 4
           # Templates and vendored assets would otherwise outrank the code.
           EXCLUDE: HTML,CSS,SCSS,Batchfile

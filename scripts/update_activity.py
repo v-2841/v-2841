@@ -14,7 +14,7 @@ import sys
 import urllib.error
 import urllib.request
 from collections import Counter
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 from pathlib import Path
 
 USER = os.environ.get('PROFILE_USER', 'v-2841')
@@ -51,16 +51,16 @@ def api(path, params=None):
         return []
 
 
-def ago(iso):
+def when(iso):
+    """Absolute date.
+
+    Relative wording ("2h ago") would be a lie the moment it is written: this
+    file is regenerated every few hours, so between runs the text silently
+    drifts away from the truth. It also produced a commit on every single run,
+    because the wording changed even when nothing else did.
+    """
     moment = datetime.fromisoformat(iso.replace('Z', '+00:00'))
-    delta = datetime.now(timezone.utc) - moment
-    if delta < timedelta(hours=1):
-        return f'{max(delta.seconds // 60, 1)}m ago'
-    if delta < timedelta(days=1):
-        return f'{delta.seconds // 3600}h ago'
-    if delta < timedelta(days=30):
-        return f'{delta.days}d ago'
-    return moment.strftime('%b %Y')
+    return moment.strftime('%-d %b %Y')
 
 
 def escape(text):
@@ -95,7 +95,7 @@ def collect_activity():
         name = repo.split('/')[-1]
         rows.append(
             f'| [{name}](https://github.com/{repo}) | {subject} '
-            f'| {ago(commit["author"]["date"])} |'
+            f'| {when(commit["author"]["date"])} |'
         )
 
     if not rows:
@@ -114,7 +114,8 @@ def collect_stats():
     for repo in repos:
         if repo.get('fork') or repo.get('archived'):
             continue
-        pushed.append(repo.get('pushed_at', ''))
+        if repo['name'] not in HIDDEN:
+            pushed.append(repo.get('pushed_at', ''))
         measured = api(f'/repos/{repo["full_name"]}/languages') or {}
         for lang, size in measured.items():
             if lang in MARKUP:
@@ -133,7 +134,7 @@ def collect_stats():
         bars.append(f'{lang:<12} {bar} {share * 100:4.1f}%')
 
     updated = max(pushed) if pushed else ''
-    footer = f'\nlast public push  {ago(updated)}' if updated else ''
+    footer = f'\nlast public push   {when(updated)}' if updated else ''
     return '```text\n' + '\n'.join(bars) + footer + '\n```'
 
 

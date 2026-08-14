@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" role="img" aria-label="Vitaliy Pavlov — backend, data and infrastructure engineer">
+  <title>Vitaliy Pavlov — backend, data &amp; infrastructure engineer</title>
+  <desc>Backend, data and infrastructure engineer. Python, Django, FastAPI, TypeScript, Kotlin, MicroPython, GCP, BigQuery, Docker, Terraform, Caddy, CDN and WAF.</desc>
+
+  <!--
+    Animation contract:
+
+    1. The intro (name, tagline, stack lines, sweep) plays ONCE and freezes. Only
+       the caret and the pipeline packets loop, because a pipeline that stopped
+       moving is a dead pipeline. A headline that retypes itself is noise.
+    2. Anything that reveals content starts at begin="0s" and carries its delay
+       inside keyTimes. A delay written as begin= lets the renderer paint the
+       settled attribute first and then wipe it, which reads as a flash.
+    3. Anything hidden before its cue carries opacity="0" as its attribute (or
+       sits outside the viewBox), so a begin= delay is safe there — and a
+       renderer that ignores SMIL entirely still shows a complete image.
+    4. Typing is calcMode="discrete": the clip and the caret step one glyph at a
+       time, so it reads as a keyboard and not as a gradient wiping over text.
+    5. Every interpolated (non-discrete) animation ends keyTimes at exactly 1,
+       repeating the final value where the motion finishes early. A linear
+       keyTimes list that stops short is an ERROR per SMIL and the whole
+       animation is DROPPED, leaving the element painted at its settled
+       attribute — that is what once made the stack lines show from frame one.
+       Discrete is the exception, hence the typing lists ending at 0.37 / 0.68.
+    6. ONE palette, no prefers-color-scheme: inside an <img> that query follows
+       the OS, not the GitHub theme, so a reader on dark GitHub with a light OS
+       would get a white slab on a dark page. The card is dark navy on purpose
+       and is checked against both #ffffff and #0d1117 page backgrounds.
+
+    Intro timeline (master clock 4.6s):
+      0.00-0.25  caret fades in at the start of the name line
+      0.30-1.72  name types, 14 glyphs, one step per 0.109s
+      1.85-1.95  caret hands off from the name line to the tagline
+      1.95-3.15  tagline types, 31 glyphs, one step per 0.040s
+      3.15-...   caret blinks on the tagline forever
+      3.25-3.65  stack line 1 fades in
+      3.55-3.95  stack line 2 fades in
+      3.50-4.60  light sweep crosses the left half once and parks off-canvas
+  -->
+
+  <defs>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop class="s0" offset="0%"/>
+      <stop class="s1" offset="50%"/>
+      <stop class="s0" offset="100%"/>
+    </linearGradient>
+
+    <!--
+      Three numbers per line must agree: the textLength pinned on the <text>, the
+      final width of its clip rect, and the final x of its caret. 40px monospace
+      advances 24px per glyph (14 glyphs = 336) and 19px advances 11.39px
+      (31 glyphs = 353); textLength holds that true on whatever monospace the
+      viewer actually has, so the caret cannot drift off the last letter.
+    -->
+    <clipPath id="nameClip">
+      <rect x="56" y="52" width="336" height="46">
+        <animate attributeName="width" calcMode="discrete"
+                 values="0;24;48;72;96;120;144;168;192;216;240;264;288;312;336"
+                 keyTimes="0;0.0652;0.089;0.1127;0.1365;0.1602;0.1839;0.2077;0.2314;0.2552;0.2789;0.3027;0.3264;0.3502;0.3739"
+                 dur="4.6s" begin="0s" fill="freeze"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="tagClip">
+      <rect x="56" y="112" width="353" height="26">
+        <animate attributeName="width" calcMode="discrete"
+                 values="0;11;23;34;46;57;68;80;91;102;114;125;137;148;159;171;182;194;205;216;228;239;251;262;273;285;296;307;319;330;342;353"
+                 keyTimes="0;0.4239;0.4326;0.4413;0.45;0.4587;0.4674;0.4761;0.4848;0.4935;0.5022;0.5109;0.5196;0.5283;0.537;0.5457;0.5543;0.563;0.5717;0.5804;0.5891;0.5978;0.6065;0.6152;0.6239;0.6326;0.6413;0.65;0.6587;0.6674;0.6761;0.6848"
+                 dur="4.6s" begin="0s" fill="freeze"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="cardClip"><rect x="0" y="0" width="1000" height="240" rx="14"/></clipPath>
+    <clipPath id="leftClip"><rect x="0" y="0" width="600" height="240"/></clipPath>
+  </defs>
+
+  <style>
+    :root, svg {
+      --bg0:#121e3a; --bg1:#18264a; --grid:#223154; --fg:#eaf0fc; --muted:#a3b4ce;
+      --accent:#66a6fb; --accent2:#2dd4bf; --node:#0e1832; --stroke:#314466;
+      --edge:#3d5077;
+    }
+    .bgA{fill:var(--bg0)} .bgB{fill:var(--bg1)}
+    .name{font:700 40px ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;fill:var(--fg)}
+    .tag{font:400 19px ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;fill:var(--muted)}
+    .meta{font:400 13px ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;fill:var(--muted)}
+    .lbl{font:600 11px ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;fill:var(--muted);letter-spacing:.06em}
+    .wire{stroke:var(--stroke);stroke-width:1.6;fill:none}
+    .node{fill:var(--node);stroke:var(--stroke);stroke-width:1.6}
+    .ico{stroke:var(--accent);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .ico2{stroke:var(--accent2);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .pkt{fill:var(--accent)} .pkt2{fill:var(--accent2)}
+    .gridline{stroke:var(--grid);stroke-width:1}
+    .cursor{fill:var(--accent)}
+    .s0{stop-color:var(--accent);stop-opacity:0}
+    .s1{stop-color:var(--accent);stop-opacity:.9}
+    .frame{fill:none;stroke:var(--edge);stroke-width:1}
+  </style>
+
+  <g clip-path="url(#cardClip)">
+    <rect class="bgA" x="0" y="0" width="1000" height="240"/>
+    <rect class="bgB" x="600" y="0" width="400" height="240"/>
+
+    <g opacity=".55">
+      <path class="gridline" d="M640 0V240M680 0V240M720 0V240M760 0V240M800 0V240M840 0V240M880 0V240M920 0V240M960 0V240"/>
+      <path class="gridline" d="M600 40H1000M600 80H1000M600 120H1000M600 160H1000M600 200H1000"/>
+    </g>
+
+    <!-- identity -->
+    <g clip-path="url(#nameClip)">
+      <text class="name" x="56" y="86" textLength="336">Vitaliy Pavlov</text>
+    </g>
+    <rect class="cursor" x="392" y="54" width="3" height="40" opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.0543;0.4022;0.4239;1"
+               dur="4.6s" begin="0s" fill="freeze"/>
+      <animate attributeName="x" calcMode="discrete"
+               values="56;80;104;128;152;176;200;224;248;272;296;320;344;368;392"
+               keyTimes="0;0.0652;0.089;0.1127;0.1365;0.1602;0.1839;0.2077;0.2314;0.2552;0.2789;0.3027;0.3264;0.3502;0.3739"
+               dur="4.6s" begin="0s" fill="freeze"/>
+    </rect>
+
+    <g clip-path="url(#tagClip)">
+      <text class="tag" x="56" y="130" textLength="353">backend · data · infrastructure</text>
+    </g>
+    <rect class="cursor" x="409" y="113" width="2.5" height="22" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.4022;0.4239;1"
+               dur="4.6s" begin="0s" fill="freeze"/>
+      <animate attributeName="x" calcMode="discrete"
+               values="56;67;79;90;102;113;124;136;147;158;170;181;193;204;215;227;238;250;261;272;284;295;307;318;329;341;352;363;375;386;398;409"
+               keyTimes="0;0.4239;0.4326;0.4413;0.45;0.4587;0.4674;0.4761;0.4848;0.4935;0.5022;0.5109;0.5196;0.5283;0.537;0.5457;0.5543;0.563;0.5717;0.5804;0.5891;0.5978;0.6065;0.6152;0.6239;0.6326;0.6413;0.65;0.6587;0.6674;0.6761;0.6848"
+               dur="4.6s" begin="0s" fill="freeze"/>
+      <!-- the one loop on the left half: a caret that stopped blinking looks broken -->
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1"
+               dur="1.1s" begin="3.15s" repeatCount="indefinite"/>
+    </rect>
+
+    <text class="meta" x="56" y="168">Python · Django · FastAPI · TypeScript · Kotlin · MicroPython
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.7065;0.7935;1"
+               dur="4.6s" begin="0s" fill="freeze"/>
+    </text>
+    <text class="meta" x="56" y="192">GCP · BigQuery · Docker · Terraform · Caddy · CDN &amp; WAF
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.7717;0.8587;1"
+               dur="4.6s" begin="0s" fill="freeze"/>
+    </text>
+
+    <!-- starts and ends outside the viewBox, so it is invisible before and after its one pass -->
+    <g clip-path="url(#leftClip)">
+      <rect x="-480" y="205" width="470" height="2" fill="url(#sweep)" opacity=".9">
+        <animate attributeName="x" values="-480;-480;620" keyTimes="0;0.7609;1"
+                 dur="4.6s" begin="0s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- the pipeline this profile is actually about -->
+    <g transform="translate(600,0)">
+      <text class="lbl" x="28" y="34">EDGE → CLOUD → DATA → DEVICE</text>
+
+      <!-- wires stop at the node edges, so a packet never crosses an icon -->
+      <path class="wire" d="M84 96H150"/>
+      <path class="wire" d="M206 96H300"/>
+      <path class="wire" d="M328 124V150 H90 V178"/>
+
+      <g transform="translate(28,68)">
+        <rect class="node" x="0" y="0" width="56" height="56" rx="12"/>
+        <path class="ico" d="M14 34a8 8 0 0 1 1-16 11 11 0 0 1 21-3 8 8 0 0 1 5 15z"/>
+      </g>
+      <g transform="translate(150,68)">
+        <rect class="node" x="0" y="0" width="56" height="56" rx="12"/>
+        <path class="ico" d="M13 17h30v10H13zM13 31h30v10H13z"/>
+        <circle class="pkt" cx="19" cy="22" r="2"/>
+        <circle class="pkt" cx="19" cy="36" r="2"/>
+      </g>
+      <g transform="translate(300,68)">
+        <rect class="node" x="0" y="0" width="56" height="56" rx="12"/>
+        <path class="ico2" d="M14 18c0-3 6-5 14-5s14 2 14 5v20c0 3-6 5-14 5s-14-2-14-5z"/>
+        <path class="ico2" d="M14 25c0 3 6 5 14 5s14-2 14-5M14 33c0 3 6 5 14 5s14-2 14-5"/>
+      </g>
+      <g transform="translate(62,178)">
+        <rect class="node" x="0" y="0" width="56" height="46" rx="10"/>
+        <rect class="ico2" x="16" y="12" width="24" height="22" rx="3"/>
+        <path class="ico2" d="M22 12V6M34 12V6M22 40v-6M34 40v-6M16 20h-6M16 28h-6M40 20h6M40 28h6"/>
+      </g>
+
+      <!--
+        animateMotion ADDS the path to cx/cy, so these circles must not carry
+        either. opacity="0" plus a begin= delay keeps them off-screen instead of
+        parked at 0,0 waiting for their cue. Each dur is the segment length at a
+        constant ~55px/s, and the begins chain so the first lap reads as a relay.
+      -->
+      <circle class="pkt" r="3.5" opacity="0">
+        <animateMotion dur="1.2s" begin="0.8s" repeatCount="indefinite" path="M84 96H150"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1"
+                 dur="1.2s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle class="pkt" r="3.5" opacity="0">
+        <animateMotion dur="1.7s" begin="2.1s" repeatCount="indefinite" path="M206 96H300"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1"
+                 dur="1.7s" begin="2.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle class="pkt2" r="3.5" opacity="0">
+        <animateMotion dur="5.3s" begin="3.9s" repeatCount="indefinite" path="M328 124V150 H90 V178"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.93;1"
+                 dur="5.3s" begin="3.9s" repeatCount="indefinite"/>
+      </circle>
+
+      <circle class="pkt2" cx="90" cy="212" r="3">
+        <animate attributeName="opacity" values="1;.15;1" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  <rect class="frame" x="0.5" y="0.5" width="999" height="239" rx="14"/>
+</svg>

@@ -1,24 +1,119 @@
-<h1 align="center">Hi 👋, I'm Vitaliy Pavlov</h1>
-<h3 align="center">Python backend developer</h3>
+<img src="./assets/header.svg" alt="Vitaliy Pavlov — backend, data and infrastructure engineer" width="100%">
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=v-2841&label=Profile%20views&color=0e75b6&style=flat" alt="v-2841" /> </p>
+I build the whole path a request takes: the **Django / FastAPI** service that answers it, the **Next.js** app in front, the **BigQuery** pipelines behind, and the **Terraform, Caddy, CDN and WAF** that keep it standing. Currently doing that full-time in **iGaming**, on a product with landing pages in several languages and a data platform underneath.
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=v-2841" alt="v-2841" /></a> </p>
+Off the clock the scale drops and the standard doesn't: firmware that has to stay alive in 38 KB of heap, a C parser for a lab chromatograph, an Armbian board port, an Android app that watches my servers.
 
-- 🌱 I’m currently learning **python, django, DRF, some frontend things (html, css) and C**
+[**Telegram**](https://t.me/vita2841) · [**rosselsprung2841@gmail.com**](mailto:rosselsprung2841@gmail.com)
 
-- 📫 How to reach me **rosselsprung2841@gmail.com**
+### Now
 
-- ⚡ Fun fact **I don`t drink coffee)**
+- **Content platforms** on Django + Wagtail: content models, StreamField blocks, data migrations between schemas, multi-language editing, per-role editor permissions.
+- **SSR front-ends** on Next.js + TypeScript, tuned for Core Web Vitals — caching strategy, payload diets, AVIF/WebP.
+- **Data pipelines** on GCP: Cloud Run + Scheduler + BigQuery, incremental MERGE, change-driven syncs to marketing platforms, CDC from MySQL.
+- **The edge**: Terraform for DNS and CDN, Caddy with automatic TLS, WAF rules, zero-downtime hosting migrations.
+- **AI-assisted development**: coding agents are part of my daily toolchain. I set the architecture, review every diff and own what ships.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://instagram.com/pavlov_vitaliy" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="pavlov_vitaliy" height="30" width="40" /></a>
-</p>
+### Selected work
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.nginx.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a> </p>
+**[esp8266-weather](https://github.com/v-2841/esp8266-weather)** — MicroPython · asyncio · I2C/OLED
+Clock and weather firmware built to survive on its own: a supervisor restarts any failed task with exponential backoff, a hardware watchdog catches a stalled event loop, and safe mode offers three independent ways back in. Config is parsed as data, so a broken file can never brick the board.
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=v-2841&show_icons=true&locale=en&layout=compact" alt="v-2841" /></p>
+**[game-buzzer](https://github.com/v-2841/game-buzzer)** — TypeScript · Socket.IO · React · Vitest
+Real-time "who pressed first" game. Each client's clock is synchronised against the server, so the winner is decided by honest press time rather than by whose packet arrived first.
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=v-2841&show_icons=true&locale=en" alt="v-2841" /></p>
+**[alcobottle](https://github.com/v-2841/alcobottle)** — Django 6 · DRF · Next.js 16 · PostgreSQL · Docker
+Spirits catalogue: a filterable REST API, an SSR storefront that generates its own SEO pages, one Caddy in front of both, and a Telegram alert on every server error.
+
+**[backups](https://github.com/v-2841/backups)** — Python (stdlib) · SSH · pg_dump · systemd
+Backup orchestrator for my servers. Pulls files, live SQLite databases and Postgres dumps over SSH into dated snapshots with a manifest, then rotates them.
+
+**[ratio_checker](https://github.com/v-2841/ratio_checker)** — C · WinAPI · MinGW
+Windows desktop tool that parses gas chromatograph exports, extracts fatty-acid peak areas and checks five ratios against GOST 32261 — the test that reveals vegetable fat hiding in butter.
+
+**[armbian_build](https://github.com/v-2841/armbian_build)** — Bash · U-Boot · Linux DTS
+Armbian port for the RK3328 control board inside a 3D printer — U-Boot, device tree, kernel config.
+
+**[laboratory](https://github.com/v-2841/laboratory)** — Django · DRF · PostgreSQL · openpyxl
+Internal service for the chemical lab I worked in: reagent stock and expiry tracking, test requests, standards and regulatory documents, role-based access, and xlsx exports onto the lab's own templates. Web app, REST API, Telegram bot and an Android client.
+
+**[neptune4-telegram-bot](https://github.com/v-2841/neptune4-telegram-bot)** — Python · aiohttp · asyncssh · Klipper
+Telegram remote for a 3D printer over Moonraker: live print state, temperatures, camera stills, progress alerts, remote power cycling.
+
+**[samsung-health-export](https://github.com/v-2841/samsung-health-export)** — Python (stdlib)
+Turns a Samsung Health export into one self-describing JSON file a doctor can actually read — units legend, coverage manifest, clinical grouping.
+
+Upstream: two pull requests merged into [**3x-ui**](https://github.com/MHSanaei/3x-ui), fixing RPM installers that pulled in a full system upgrade.
+
+### Stack
+
+- **Languages** — Python · TypeScript · Kotlin · C · Bash · SQL · HCL
+- **Backend** — Django · DRF · Wagtail · FastAPI · Flask · Celery · gunicorn
+- **Front-end** — Next.js · React · Tailwind · Vite · Playwright
+- **Data** — BigQuery · PostgreSQL · MySQL · Redis · dbt · Datastream CDC · GA4
+- **Cloud & infra** — GCP (Cloud Run · Compute Engine · IAM/WIF · Secret Manager) · Docker · Terraform · GitHub Actions · Caddy · nginx · CDN & WAF
+- **Embedded & mobile** — MicroPython on ESP8266 · Android (Kotlin, Jetpack Compose) · Armbian · Klipper
+
+<!-- STATS:START -->
+```text
+Python       ██████████████████░░░░░░ 73.3%
+TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░ 10.2%
+Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  9.1%
+Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.9%
+C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.9%
+JavaScript   ░░░░░░░░░░░░░░░░░░░░░░░░  1.8%
+last public push  1h ago
+```
+<!-- STATS:END -->
+
+<!-- ACTIVITY:START -->
+| repository | latest commit | |
+|---|---|---|
+| [backups](https://github.com/v-2841/backups) | Add live progress output and keep\_min\_backups retention guard | 1d ago |
+| [esp8266-weather](https://github.com/v-2841/esp8266-weather) | Make safe mode escapable from the button, blank the screen on refresh | 5d ago |
+| [alcobottle](https://github.com/v-2841/alcobottle) | Update frontend dependencies | 6d ago |
+| [Vita](https://github.com/v-2841/Vita) | Vita 1.0.5: stable alphabetical order for online clients | 7d ago |
+| [zv-uplink](https://github.com/v-2841/zv-uplink) | zv: keep the timestamp visible on third-party launchers | 8d ago |
+<!-- ACTIVITY:END -->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/output/snake-light.svg">
+  <img alt="A snake eating my contribution graph" src="https://raw.githubusercontent.com/v-2841/v-2841/output/snake-light.svg" width="100%">
+</picture>
+
+<details>
+<summary><b>More numbers</b></summary>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/github_dark/0-profile-details.svg">
+  <img alt="Profile details" src="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/default/0-profile-details.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/github_dark/3-stats.svg">
+  <img alt="Stats" src="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/default/3-stats.svg" width="49%">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/github_dark/4-productive-time.svg">
+  <img alt="Productive time" src="https://raw.githubusercontent.com/v-2841/v-2841/profile-summary-card-output/profile-summary-card-output/default/4-productive-time.svg" width="49%">
+</picture>
+
+<img alt="Contribution calendar in 3d" src="./profile-3d-contrib/profile-night-view.svg" width="100%">
+
+</details>
+
+<details>
+<summary><b>More projects</b></summary>
+<br>
+
+- **[shells](https://github.com/v-2841/shells)** — Fedora tooling: an installer for the fish shell, plus an interactive TUI that builds Caddy with the plugins I need.
+- **[qr_stand](https://github.com/v-2841/qr_stand)** — generates a 3D-printable stand with your Wi-Fi QR code baked into the geometry, straight to STL.
+- **[Vita](https://github.com/v-2841/Vita)** — Android app that watches my VPS and its VPN panel: CPU, RAM, disk, traffic per client. Credentials are sealed with AES-GCM in the Android KeyStore.
+- **[daystat](https://github.com/v-2841/daystat)** — personal Django tracker for weight, calories and spending, with a hand-built server-side calendar, self-hosted fonts and a Tailwind build that needs no Node.
+- **[zv-uplink](https://github.com/v-2841/zv-uplink)** — a 1×1 Android widget that answers one question: is the internet actually up?
+- **[telegram-openvpn-bot](https://github.com/v-2841/telegram-openvpn-bot)** — one tap, one day-long OpenVPN key, delivered as a file.
+- **[tapo_socket_charging](https://github.com/v-2841/tapo_socket_charging)** — keeps a laptop battery in the 40-60% band by switching the smart socket its charger sits in.
+
+</details>

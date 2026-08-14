@@ -23,6 +23,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
+      - name: Keep only the view the README shows
+        run: |
+          # The action renders ten variants; the README embeds one.
+          find profile-3d-contrib -type f -name '*.svg' \
+            ! -name 'profile-night-view.svg' -delete
+
       - name: Commit if changed
         run: |
           git config user.name  'github-actions[bot]'

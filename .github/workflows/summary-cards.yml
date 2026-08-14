@@ -25,11 +25,38 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
-          # The action pushes whatever branch is checked out; this input only
-          # rewrites the links in its own preview file.
           BRANCH_NAME: main
           UTC_OFFSET: 4
           # Templates and vendored assets would otherwise outrank the code.
           EXCLUDE: HTML,CSS,SCSS,Batchfile
           ANIMATION: rise
           DURATION: 1.2
+          # Commit here instead, after dropping the themes we never render.
+          AUTO_PUSH: false
+
+      - name: Keep only the cards the README shows
+        run: |
+          cd profile-summary-card-output
+          # The action emits 66 themes and 5 cards each; the README uses two
+          # themes and three cards. The rest is a few megabytes of dead weight.
+          find . -mindepth 1 -maxdepth 1 -type d \
+            ! -name default ! -name github_dark -exec rm -rf {} +
+          find . -type f -name '*.svg' \
+            ! -name '0-profile-details.svg' \
+            ! -name '3-stats.svg' \
+            ! -name '4-productive-time.svg' -delete
+          rm -f README.md */README.md
+
+      - name: Commit if changed
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A profile-summary-card-output
+          git diff --staged --quiet && exit 0
+          git commit -q -m 'chore: refresh profile summary cards'
+          for attempt in 1 2 3; do
+            git push --quiet && exit 0
+            echo "push rejected on attempt $attempt, rebasing"
+            git pull --quiet --rebase origin main
+          done
+          exit 1

@@ -56,24 +56,24 @@ Upstream: two pull requests merged into [**3x-ui**](https://github.com/MHSanaei/
 
 <!-- STATS:START -->
 ```text
-Python       ██████████████████░░░░░░ 73.3%
+Python       ██████████████████░░░░░░ 73.4%
 TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░ 10.2%
 Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  9.1%
-Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.9%
+Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.8%
 C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.9%
 JavaScript   ░░░░░░░░░░░░░░░░░░░░░░░░  1.8%
-last public push  1h ago
+last public push  1m ago
 ```
 <!-- STATS:END -->
 
 <!-- ACTIVITY:START -->
 | repository | latest commit | |
 |---|---|---|
+| [laboratory](https://github.com/v-2841/laboratory) | Use parameterized query in reagent search | 3m ago |
 | [backups](https://github.com/v-2841/backups) | Add live progress output and keep\_min\_backups retention guard | 1d ago |
-| [esp8266-weather](https://github.com/v-2841/esp8266-weather) | Make safe mode escapable from the button, blank the screen on refresh | 5d ago |
+| [esp8266-weather](https://github.com/v-2841/esp8266-weather) | Make safe mode escapable from the button, blank the screen on refresh | 6d ago |
 | [alcobottle](https://github.com/v-2841/alcobottle) | Update frontend dependencies | 6d ago |
 | [Vita](https://github.com/v-2841/Vita) | Vita 1.0.5: stable alphabetical order for online clients | 7d ago |
-| [zv-uplink](https://github.com/v-2841/zv-uplink) | zv: keep the timestamp visible on third-party launchers | 8d ago |
 <!-- ACTIVITY:END -->
 
 <picture>

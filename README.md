@@ -63,14 +63,14 @@ Kotlin       ██░░░░░░░░░░░░░░░░░░░░�
 Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.8%
 C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.9%
 JavaScript   ░░░░░░░░░░░░░░░░░░░░░░░░  1.8%
-last public push   15 Aug 2026
+last public push   16 Aug 2026
 ```
 <!-- STATS:END -->
 
 <!-- ACTIVITY:START -->
 | repository | latest commit | |
 |---|---|---|
-| [alcobottle](https://github.com/v-2841/alcobottle) | Add Telegram polling conflict diagnostics | 15 Aug 2026 |
+| [alcobottle](https://github.com/v-2841/alcobottle) | Update compose | 16 Aug 2026 |
 | [laboratory](https://github.com/v-2841/laboratory) | Use parameterized query in reagent search | 14 Aug 2026 |
 | [backups](https://github.com/v-2841/backups) | Add live progress output and keep\_min\_backups retention guard | 13 Aug 2026 |
 | [esp8266-weather](https://github.com/v-2841/esp8266-weather) | Make safe mode escapable from the button, blank the screen on refresh | 8 Aug 2026 |

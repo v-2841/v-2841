@@ -57,13 +57,13 @@ Turns a Samsung Health export into one self-describing JSON file a doctor can ac
 
 <!-- STATS:START -->
 ```text
-Python       ██████████████████░░░░░░ 73.3%
-TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░ 10.2%
-Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  9.1%
+Python       ██████████████████░░░░░░ 73.4%
+TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░ 10.1%
+Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  9.0%
 Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.8%
 JavaScript   ░░░░░░░░░░░░░░░░░░░░░░░░  2.0%
-C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.9%
-last public push   22 Aug 2026
+C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.8%
+last public push   11 Sep 2026
 ```
 <!-- STATS:END -->
 

@@ -72,7 +72,6 @@ last public push   11 Sep 2026
 |---|---|---|
 | [telegram-rate-bot](https://github.com/v-2841/telegram-rate-bot) | switch to profinance2841, remove mini app, add text conversion | 11 Sep 2026 |
 | [daystat](https://github.com/v-2841/daystat) | Drop dead code and pin the isort line spacing | 22 Aug 2026 |
-| [alcobottle](https://github.com/v-2841/alcobottle) | Update compose | 16 Aug 2026 |
 <!-- ACTIVITY:END -->
 
 <picture>

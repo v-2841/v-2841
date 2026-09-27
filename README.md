@@ -57,19 +57,20 @@ Turns a Samsung Health export into one self-describing JSON file a doctor can ac
 
 <!-- STATS:START -->
 ```text
-Python       ██████████████████░░░░░░ 73.4%
-TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░ 10.1%
-Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  9.0%
-Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.8%
-JavaScript   ░░░░░░░░░░░░░░░░░░░░░░░░  2.0%
+Python       ██████████████████░░░░░░ 74.6%
+TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░  9.6%
+Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  8.6%
+Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.7%
+JavaScript   ░░░░░░░░░░░░░░░░░░░░░░░░  1.9%
 C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.8%
-last public push   11 Sep 2026
+last public push   27 Sep 2026
 ```
 <!-- STATS:END -->
 
 <!-- ACTIVITY:START -->
 | repository | latest commit | |
 |---|---|---|
+| [cryptopass](https://github.com/v-2841/cryptopass) | Revert "QR code: put the code in lines, as on paper" | 27 Sep 2026 |
 | [telegram-rate-bot](https://github.com/v-2841/telegram-rate-bot) | switch to profinance2841, remove mini app, add text conversion | 11 Sep 2026 |
 <!-- ACTIVITY:END -->
 

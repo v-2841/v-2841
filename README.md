@@ -70,6 +70,7 @@ last public push   7 Oct 2026
 <!-- ACTIVITY:START -->
 | repository | latest commit | |
 |---|---|---|
+| [samsung-health-export](https://github.com/v-2841/samsung-health-export) | Fix parsing of the new Samsung Health export (v1.1.0) | 7 Oct 2026 |
 | [daystat](https://github.com/v-2841/daystat) | Update dependencies | 3 Oct 2026 |
 | [cryptopass](https://github.com/v-2841/cryptopass) | Revert "QR code: put the code in lines, as on paper" | 27 Sep 2026 |
 | [telegram-rate-bot](https://github.com/v-2841/telegram-rate-bot) | switch to profinance2841, remove mini app, add text conversion | 11 Sep 2026 |

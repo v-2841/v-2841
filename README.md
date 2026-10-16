@@ -57,13 +57,13 @@ Turns a Samsung Health export into one self-describing JSON file a doctor can ac
 
 <!-- STATS:START -->
 ```text
-Python       ██████████████████░░░░░░ 75.5%
-TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░  9.3%
-Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  8.3%
+Python       ██████████████████░░░░░░ 75.3%
+TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░  9.2%
+Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  8.2%
 Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.6%
-JavaScript   ░░░░░░░░░░░░░░░░░░░░░░░░  1.8%
+JavaScript   █░░░░░░░░░░░░░░░░░░░░░░░  2.2%
 C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.7%
-last public push   7 Oct 2026
+last public push   16 Oct 2026
 ```
 <!-- STATS:END -->
 
@@ -71,7 +71,7 @@ last public push   7 Oct 2026
 | repository | latest commit | |
 |---|---|---|
 | [samsung-health-export](https://github.com/v-2841/samsung-health-export) | Fix parsing of the new Samsung Health export (v1.1.0) | 7 Oct 2026 |
-| [daystat](https://github.com/v-2841/daystat) | Update dependencies | 3 Oct 2026 |
+| [daystat](https://github.com/v-2841/daystat) | Widen the tap area around the chart key points | 16 Oct 2026 |
 | [cryptopass](https://github.com/v-2841/cryptopass) | Revert "QR code: put the code in lines, as on paper" | 27 Sep 2026 |
 <!-- ACTIVITY:END -->
 

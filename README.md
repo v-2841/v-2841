@@ -61,18 +61,18 @@ Python       ██████████████████░░░░�
 TypeScript   ██░░░░░░░░░░░░░░░░░░░░░░  9.2%
 Kotlin       ██░░░░░░░░░░░░░░░░░░░░░░  8.2%
 Shell        █░░░░░░░░░░░░░░░░░░░░░░░  2.6%
-JavaScript   █░░░░░░░░░░░░░░░░░░░░░░░  2.2%
+JavaScript   █░░░░░░░░░░░░░░░░░░░░░░░  2.1%
 C            ░░░░░░░░░░░░░░░░░░░░░░░░  1.7%
-last public push   18 Oct 2026
+last public push   19 Oct 2026
 ```
 <!-- STATS:END -->
 
 <!-- ACTIVITY:START -->
 | repository | latest commit | |
 |---|---|---|
-| [daystat](https://github.com/v-2841/daystat) | Capitalize the weekly exclusion mark in expense lists | 18 Oct 2026 |
+| [daystat](https://github.com/v-2841/daystat) | Show dates instead of yesterday and tomorrow on the day navigation | 19 Oct 2026 |
 | [samsung-health-export](https://github.com/v-2841/samsung-health-export) | Fix parsing of the new Samsung Health export (v1.1.0) | 7 Oct 2026 |
-| [cryptopass](https://github.com/v-2841/cryptopass) | Revert "QR code: put the code in lines, as on paper" | 27 Sep 2026 |
+| [cryptopass](https://github.com/v-2841/cryptopass) | Bump version to 1.1.0 | 19 Oct 2026 |
 <!-- ACTIVITY:END -->
 
 <picture>

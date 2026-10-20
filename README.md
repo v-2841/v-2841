@@ -70,8 +70,8 @@ last public push   19 Oct 2026
 <!-- ACTIVITY:START -->
 | repository | latest commit | |
 |---|---|---|
-| [daystat](https://github.com/v-2841/daystat) | Show dates instead of yesterday and tomorrow on the day navigation | 19 Oct 2026 |
 | [cryptopass](https://github.com/v-2841/cryptopass) | Bump version to 1.1.0 | 19 Oct 2026 |
+| [daystat](https://github.com/v-2841/daystat) | Show dates instead of yesterday and tomorrow on the day navigation | 19 Oct 2026 |
 | [samsung-health-export](https://github.com/v-2841/samsung-health-export) | Fix parsing of the new Samsung Health export (v1.1.0) | 7 Oct 2026 |
 <!-- ACTIVITY:END -->
 

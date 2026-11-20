@@ -68,9 +68,7 @@ last public push   19 Oct 2026
 <!-- STATS:END -->
 
 <!-- ACTIVITY:START -->
-| repository | latest commit | |
-|---|---|---|
-| [daystat](https://github.com/v-2841/daystat) | Show dates instead of yesterday and tomorrow on the day navigation | 19 Oct 2026 |
+_No public activity in the last few days._
 <!-- ACTIVITY:END -->
 
 <picture>

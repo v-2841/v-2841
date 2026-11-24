@@ -70,6 +70,7 @@ last public push   24 Nov 2026
 <!-- ACTIVITY:START -->
 | repository | latest commit | |
 |---|---|---|
+| [shells](https://github.com/v-2841/shells) | Add per-addon Caddy updates and harden recovery | 24 Nov 2026 |
 | [electronic-components](https://github.com/v-2841/electronic-components) | Add photo upload by URL, fix review findings | 20 Nov 2026 |
 <!-- ACTIVITY:END -->
 
